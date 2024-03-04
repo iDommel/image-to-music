@@ -1,13 +1,24 @@
 from PIL import Image
 import numpy as np
 from sklearn.cluster import KMeans
+import musicpy as mp
 
-image = Image.open("Flag_of_Sudan.png")
+image = Image.open("Flag_of_France.png")
+x, y = image.size
+
+h = 150 / float(y)
+
+redim = min(x, h)
+
+new_h = int(y * redim)
+
+image = image.resize((x, new_h), Image.ANTIALIAS)
+
 x, y = image.size
 
 if image.mode != 'RGB':
     image = image.convert('RGB')
-
+    
 pixels = list(image.getdata())
 pixels_list = [pixels[i * x:(i + 1) * x] for i in range(y)]
 image_array = np.array(image)
