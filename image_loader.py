@@ -7,7 +7,7 @@ x, y = image.size
 
 if image.mode != 'RGB':
     image = image.convert('RGB')
-    
+
 pixels = list(image.getdata())
 pixels_list = [pixels[i * x:(i + 1) * x] for i in range(y)]
 image_array = np.array(image)
