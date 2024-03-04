@@ -1,3 +1,4 @@
 pydub
 scikit-learn
 numpy
+musicpy
