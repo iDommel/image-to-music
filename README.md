@@ -1,5 +1,5 @@
-# image-to-music
+# Image-to-music
+Run the image to music notebook !
 
-
-## requirements
+## Requirements
 Please install ffmpeg
