@@ -2,3 +2,4 @@ pydub
 scikit-learn
 numpy
 musicpy
+sf2_loader
